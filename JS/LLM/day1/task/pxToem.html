@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>em 계산기</h1>
+        <label for="basePx">기본 폰트(px)</label>
+        <input type="text" id="basePx" placeholder="기본 폰트를 입력하세요." />
+
+        <label for="targetPx">원하는 px값</label>
+        <input type="text" id="targetPx" placeholder="원하는 px 값을 입력하세요." />
+
+        <button type="button" onclick="pxToEm();">em 값 계산하기</button>
+
+        <p id="result"></p>
+
+        <script>
+            // 변수를 선언 후, input id를 찾아서 input 변수에 할당한다.
+            const baseInput = document.getElementById("basePx");
+            const targetInput = document.getElementById("targetPx");
+            const result = document.getElementById("result");
+
+            function pxToEm() {
+                console.log(`기본 폰트 값은 :`, baseInput.value); // 기본 폰트 값(value)을 가져와서 콘솔에 출력
+                console.log(`원하는 px 값은 :`, targetInput.value); // 원하는 px 값(value)을 가져와서 콘솔에 출력
+
+                const base = +baseInput.value; // 기본 폰트 값을 number 타입으로 변환
+                const target = +targetInput.value; // 원하는 px 값을 number 타입으로 변환
+
+                console.log(typeof base); // base의 타입을 콘솔에 출력
+                console.log(typeof target); // target의 타입을 콘솔에 출력
+
+                const em = target / base; // em 단위로 변환, 원하는 폰트 / 기본 폰트 값
+                console.log(`${target}px -> ${em}em`);
+
+                result.innerText = `${target}px = ${em}em`; //result id에 em 값을 출력
+            }
+        </script>
+    </body>
+</html>

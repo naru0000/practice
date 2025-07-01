@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>두 수의 곱 구하기</title>
+    </head>
+    <body>
+        <input type="text" id="firstNum" placeholder="첫 번째 값" />
+        <input type="text" id="secondNum" placeholder="두 번째 값" />
+        <button type="button" onclick="mutiply()">곱하기</button>
+
+        <script>
+            const num1 = document.getElementById("firstNum");
+            const num2 = document.getElementById("secondNum");
+
+            function mutiply() {
+                const a = +num1.value;
+                const b = +num2.value;
+                console.log(`${a} * ${b} = ${a * b}`);
+            }
+        </script>
+    </body>
+</html>

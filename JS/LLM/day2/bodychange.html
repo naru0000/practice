@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배경색 바꾸기</title>
+</head>
+
+<body>
+    <h1>셀렉트 버튼을 클릭해주세요.</h1>
+    <select name="colorSelect" id="colorSelect">
+        <option value="">컬러 선택</option>
+        <option value="#32a852">초록색</option>
+        <option value="#4232a8">보라색</option>
+        <option value="#ff36b8">핑크</option>
+        <option value="#ff0022">레드</option>
+    </select>
+
+    <script>
+        const color = document.getElementById("colorSelect");
+        color.addEventListener('click', function (e) {
+            document.body.style.backgroundColor = e.target.value;
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가위바위보 게임</title>
+</head>
+
+<body>
+
+    <button type="button">가위</button>
+    <button type="button">바위</button>
+    <button type="button">보</button>
+    <p id="result"></p>
+
+    <script>
+
+        // gamePlay() 가위바위보 시작
+
+        // 각각의 버튼을 클릭했을 때 '가위','바위','보'라는 각각의 텍스트를 콘솔에 출력하시오.
+        // aiChoice === userChoice '비겼습니다' -> 같지 않다면 (이기거나,졌습니다.)
+
+        const rsp = ["가위", "바위", "보"];
+        const result = document.getElementById("result");
+
+        const buttons = document.querySelectorAll("button");
+
+        buttons.forEach(function (eachBtn) {
+            eachBtn.addEventListener("click", function (e) {
+                const userChoice = e.target.textContent; // 유저 선택
+                const aiChoice = rsp[Math.floor(Math.random() * rsp.length)]; // 컴퓨터
+                let message = "";
+
+                if (userChoice === aiChoice) {
+                    message = "비겼습니다.";
+                } else if
+                    (
+                    (userChoice === "가위" && aiChoice === "보") ||
+                    (userChoice === "바위" && aiChoice === "가위") ||
+                    (userChoice === "보" && aiChoice === "바위")
+                ) {
+                    message = "이겼습니다.";
+                } else {
+                    message = "졌습니다.";
+                }
+
+                result.textContent = `결과 : ${message}`;
+            })
+        })
+
+
+    </script>
+</body>
+
+</html>

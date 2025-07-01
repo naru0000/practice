@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>학점을 보여줘</title>
+</head>
+
+<body>
+    <select id="gradeSelect">
+        <option value="A+">A+</option>
+        <option value="A">A</option>
+        <option value="B+">B+</option>
+    </select>
+    <button id="checkBtn">학점 확인</button>
+    <p id="result"></p>
+
+
+    <script>
+
+        const gradePoints = {
+            "A+": 4.5, "A": 4.0, "B+": 3.5, "B": 3.0, "C": 2.0
+        };
+
+        // id 가져오는것만 잘해ㅣ..ㅋㅋ
+        const select = document.getElementById("gradeSelect");
+        const btn = document.getElementById("checkBtn");
+        const result = document.getElementById("result");
+
+        btn.addEventListener('click', () => {
+            const grade = select.value;
+            const showGrade = gradePoints[grade];
+
+            result.textContent = `선택한 성적: ${grade}, 학점: ${showGrade}`
+        });
+    </script>
+</body>
+
+</html>

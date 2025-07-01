@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>document</title>
+        <link rel="stylesheet" href="./002.css" />
+    </head>
+    <body>
+        <div class="alert-box" id="alert">
+            <p id="title">알림창임</p>
+            <button id="close">닫기</button>
+        </div>
+        <button id="block">버튼</button>
+
+        <button onclick="showAlert('아이디 입력하셈')">버튼1</button>
+        <button onclick="showAlert('비번 입력하셈')">버튼2</button>
+
+        <script>
+            // 이벤트리스너 사용
+            document.getElementById("close").addEventListener("click", function () {
+                document.getElementById("alert").style.display = "none";
+            });
+
+            document.getElementById("block").addEventListener("click", function () {
+                document.getElementById("alert").style.display = "block";
+            });
+
+            // 함수 파라미터 문법 사용
+            function displayAlert(display) {
+                document.getElementById("alert").style.display = display;
+            }
+
+            function showAlert(message) {
+                document.getElementById("title").innerHTML = message;
+                document.getElementById("alert").style.display = "block";
+            }
+        </script>
+    </body>
+</html>

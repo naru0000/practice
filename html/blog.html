@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>블로그 목록 만들기</title>
+        <style>
+            .container::after {
+                content: "";
+                display: block;
+                clear: both;
+            }
+            .left {
+                width: 80%;
+                float: left;
+            }
+            .left-header {
+            }
+            .profile {
+                width: 50px;
+                height: 50px;
+                overflow: hidden;
+                border-radius: 50%;
+                display: inline-block;
+                margin-right: 8px;
+            }
+            .profile img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .user {
+                display: inline-block;
+            }
+            .left-content {
+            }
+            .left-content h1 {
+                font-size: 16px;
+            }
+            .left-content p {
+                font-size: 14px;
+                color: #333;
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 3;
+            }
+            .right {
+                width: 20%;
+                float: left;
+            }
+            .right img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .navbar li {
+                list-style: none;
+                display: inline-block;
+                width: 60px;
+                text-align: center;
+                background: #eee;
+                padding: 10px;
+                border-radius: 5px;
+            }
+            a:link {
+                color: black;
+            }
+            .navbar a {
+                font-size: 16px;
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <nav>
+                <ul class="navbar">
+                    <li><a href="#">영화</a></li>
+                    <li><a href="#">맛집</a></li>
+                    <li><a href="#">IT</a></li>
+                    <li><a href="#">컴퓨터</a></li>
+                </ul>
+            </nav>
+            <div class="left">
+                <div class="left-header">
+                    <div class="profile">
+                        <img
+                            src="https://i.ytimg.com/vi/moFB-j5iY2E/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLD0QcbdbOBzbIR5mOv7DMlEnZ60TQ"
+                            alt="프로필 사진"
+                        />
+                    </div>
+                    <div class="user">
+                        <p>아우리</p>
+                        <span>1시간 전</span>
+                    </div>
+                </div>
+                <div class="left-content">
+                    <h1>4k 빔프로젝터 가성비최강으로 선택했어요</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi magnam nostrum deserunt, porro sit perspiciatis vitae minima optio modi
+                        nihil consectetur. Modi doloribus quidem fugit sit veritatis ipsam veniam eligendi! Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Sequi magnam nostrum deserunt, porro sit perspiciatis vitae minima optio modi nihil consectetur. Modi doloribus quidem fugit sit
+                        veritatis ipsam veniam eligendi!
+                    </p>
+                </div>
+            </div>
+            <div class="right">
+                <img src="https://i.namu.wiki/i/SD6l4YRyvVXDpK5wkejjufJH-gPiiQ4PRi62CO40eFDkmz8FwP-jkPnQfdMMb5eiaH1hL_HTZeLsDjTWhRJZNA.webp" alt="테스트" />
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+</head>
+
+<body>
+    <button type="button" onclick="playGame('가위')">가위</button>
+    <button type="button" onclick="playGame('바위')">바위</button>
+    <button type="button" onclick="playGame('보')">보</button>
+
+    <p id="result">결과를 출력합니다.</p>
+    <p id="score">점수를 출력합니다.</p>
+
+    <script>
+
+        let userScore = 0;
+        let aiScore = 0;
+        const rsp = ['가위', '바위', '보'];
+
+        const resultMsg = document.getElementById("result");
+        const score = document.getElementById("score");
+
+        // 승패 함수
+        function getGameResult(user, ai) {
+            if (user === ai) {
+                return 'draw';
+            } else if ((user === '가위' && ai === '보') || (user === '바위' && ai === '가위') || (user === '보' && ai === '바위')) {
+                return 'win';
+            } else {
+                return 'lose';
+            }
+        }
+
+        // 게임 함수
+        function playGame(userChoice) {
+
+            // ai 랜덤 생성
+            const aiChoice = rsp[Math.floor(Math.random() * rsp.length)];
+
+            // 승패 결과를 받자
+            const result = getGameResult(userChoice, aiChoice);
+
+            let message = '';
+
+            if (result === 'win') {
+                userScore++;
+                message = "이겼습니다.";
+            } else if (result === 'lose') {
+                aiScore++;
+                message = "졌습니다.";
+            } else {
+                message = "비겼습니다.";
+            }
+
+            resultMsg.textContent = `당신 : ${userChoice}, AI : ${aiChoice}, 결과 : ${message}`;
+            score.textContent = `현재 스코어 : 당신(${userScore}) vs AI(${aiScore})`;
+
+        }
+    </script>
+</body>
+
+</html>

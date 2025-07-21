@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>무한 스크롤 연습</title>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+
+    #products-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .product-card {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .product-card img {
+      max-width: 100%;
+      height: 100px;
+      object-fit: cover;
+    }
+
+    #loader {
+      text-align: center;
+      padding: 20px;
+      font-size: 24px;
+      display: none;
+    }
+
+    /* 처음엔 숨겨둠 */
+  </style>
+</head>
+
+<body>
+
+  <h1>상품 목록 (무한 스크롤)</h1>
+  <div id="products-list"></div>
+
+  <div id="loader">⏳ 로딩 중...</div>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>페이지네이션 연습</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      container-type: inline-size;
+    }
+
+    #products-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .product-card {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .product-card img {
+      max-width: 100%;
+      height: 100px;
+      object-fit: cover;
+    }
+
+    #pagination {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      gap: 5px;
+    }
+
+    .page-btn {
+      padding: 8px 12px;
+      border: 1px solid #ccc;
+      background-color: white;
+      cursor: pointer;
+    }
+
+    .page-btn.active {
+      background-color: #007BFF;
+      color: white;
+      border-color: #007BFF;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>상품 목록</h1>
+  <div id="products-list"></div>
+
+  <div id="pagination"></div>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>

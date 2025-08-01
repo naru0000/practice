@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>숫자 맞추기</title>
+</head>
+
+<body>
+  <h1>guess a number (1~10)</h1>
+  <input type="number" id="inputNumber" placeholder="숫자를 입력하세요." />
+  <button type="button" id="checkButton">확인</button>
+  <p id="result"></p>
+
+  <script>
+    const inputEl = document.querySelector('#inputNumber');
+    const buttonEl = document.querySelector('#checkButton');
+    const resultEl = document.querySelector('#result');
+
+    resultEl.innerHTML = 'DOM 조작 성공!'
+    resultEl.style.color = 'blue';
+    resultEl.style.fontSize = '24px';
+
+    buttonEl.addEventListener('click', () => {
+      resultEl.textContent = "버튼 클릭됨!";
+    })
+
+  </script>
+</body>
+
+</html>

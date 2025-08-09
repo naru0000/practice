@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Simple IntersectionObserver Test</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+        }
+
+        .spacer {
+            height: 100vh;
+            /* 화면 높이만큼의 공간 */
+            background-color: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2em;
+            color: #ccc;
+        }
+
+        #target-box {
+            height: 300px;
+            width: 100%;
+            background-color: salmon;
+            /* 초기 색상 */
+            color: white;
+            font-size: 2em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.4s, transform 0.4s;
+            /* 부드러운 전환 효과 */
+        }
+
+        /* JavaScript로 추가될 클래스 */
+        #target-box.active {
+            background-color: dodgerblue;
+            /* 변경될 색상 */
+            transform: scale(1.05);
+            /* 약간 커지는 효과 */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="spacer">⬇️ 스크롤을 내려주세요 ⬇️</div>
+
+    <div id="target-box">이 상자가 보이면 색이 바뀝니다!</div>
+
+    <div class="spacer">⬆️ 스크롤을 다시 올려보세요 ⬆️</div>
+
+    <script src="./lazy.js"></script>
+</body>
+
+</html>

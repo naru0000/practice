@@ -1,0 +1,103 @@
+.navbar {
+  background-color: #333;
+
+  &-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-logo {
+    a {
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  }
+
+  &-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    > li {
+      position: relative;
+
+      > a {
+        display: block;
+        color: white;
+        padding: 20px;
+        text-decoration: none;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: #555;
+        }
+      }
+    }
+  }
+
+  // 드롭다운 스타일
+  .dropdown {
+    position: relative;
+
+    &-btn {
+      background: none;
+      border: none;
+      color: white;
+      padding: 20px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: #555;
+      }
+    }
+
+    &-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #444;
+      min-width: 200px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+
+      &.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+
+      li {
+        a {
+          display: block;
+          color: white;
+          padding: 12px 20px;
+          text-decoration: none;
+          transition: background-color 0.3s;
+
+          &:hover {
+            background-color: #555;
+          }
+        }
+      }
+    }
+  }
+}
+
+// 기본 페이지 스타일
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}

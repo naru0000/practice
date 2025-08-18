@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { NavLink } from "react-router-dom"; // 라우팅 목적으로 추가
 import "./Navbar.scss";
 
 function Navbar({ children }) {
@@ -12,7 +13,7 @@ function Navbar({ children }) {
 function NavbarLogo({ children, href }) {
   return (
     <div className="navbar-logo">
-      <a href={href}>{children}</a>
+      <NavLink to={href}>{children}</NavLink>
     </div>
   );
 }
@@ -24,7 +25,9 @@ function NavbarMenu({ children }) {
 function NavbarItem({ children, href }) {
   return (
     <li>
-      <a href={href}>{children}</a>
+      <NavLink to={href} className={({ isActive }) => (isActive ? "active" : "")}>
+        {children}
+      </NavLink>
     </li>
   );
 }
@@ -48,7 +51,9 @@ function DropDown({ title, children }) {
 function DropdownItem({ children, href }) {
   return (
     <li>
-      <a href={href}>{children}</a>
+      <NavLink to={href} className={({ isActive }) => (isActive ? "active" : "")}>
+        {children}
+      </NavLink>
     </li>
   );
 }

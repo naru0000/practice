@@ -37,3 +37,5 @@ let var7 = 10;
 let res = var7 % 2 === 0 ? "짝" : "홀";
 
 // 요구사항: 변수 res에 var7의 값이 짝수 -> '짝', 홀수 -> '홀'
+
+// null이거나 undefined가 아닌 falsy한 값이 있어도 맨 앞의 변수값 출력

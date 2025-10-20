@@ -29,6 +29,7 @@ function repeat(count, callback) {
   }
 }
 
+// 화살표 함수 사용시
 repeat(5, (idx) => {
   console.log(idx);
 });
@@ -36,3 +37,8 @@ repeat(5, (idx) => {
 repeat(5, (idx) => {
   console.log(idx * 2);
 });
+
+// 함수선언문 사용시
+// repeat(5, function (idx) {
+//   console.log(idx);
+// })

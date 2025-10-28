@@ -2,7 +2,15 @@
 
 const Button = ({ children, text, color = "black" }) => {
   return (
-    <button style={{ color: color }}>
+    <button
+      onClick={() => {
+        console.log(text);
+      }}
+      onMouseEnter={() => {
+        console.log(text);
+      }}
+      style={{ color: color }}
+    >
       {text} - {color}
       {children}
     </button>

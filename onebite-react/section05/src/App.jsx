@@ -1,30 +1,23 @@
 import "./App.css";
-import Header from "./components/header";
-import Main from "./components/Main";
-import Footer from "./components/Footer";
-import Button from "./components/Button";
+import Bulb from "./components/Bulb";
+import Counter from "./components/Counter";
 
 function App() {
-  const buttonProps = {
-    text: "메일",
-    color: "green",
-    a: 1,
-    b: 2,
-    c: 3,
-  };
+  // 인수로는 state의 초기값을 받음
+  // 첫번째 요소는 현재값, 두번째는 상태변화 함수
+  // 리랜더링 => 컴포넌트 값 변화(업데이트)가 되면 다시 리턴을 한다.
+  // 왜 상태값을 지정해야 하는가?
+  // => 리액트에서는 state값이 변화되어야 랜더링이 다시 된다.
+
+  // 리랜더링 되는 기준
+  // 1. state 값 변경시
+  // 2. props 값 변경시
+  // 3. 부모 컴포넌트 state변경시
 
   return (
     <>
-      {/* <Button text={"메일"} color={"red"} a={1} b={2} c={3} /> */}
-
-      {/* 스프레드연산자를 이용해서 모든 props를 하나로 던져줄 수 있다. */}
-      <Button {...buttonProps} />
-      <Button text={"카페"} color={"red"} />
-      {/* 자식 요소를 자식 컴포넌트에 전달할 수 있다/ */}
-      <Button text={"블로그"}>
-        <Header />
-      </Button>
-      <Main />
+      <Bulb />
+      <Counter />
     </>
   );
 }

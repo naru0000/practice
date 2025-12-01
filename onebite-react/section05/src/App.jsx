@@ -1,4 +1,6 @@
 import "./App.css";
+import Counter from "./components/Counter";
+import HookExam from "./components/HookExam";
 import Register from "./components/Register";
 
 function App() {
@@ -10,7 +12,7 @@ function App() {
 
   return (
     <>
-      <Register />
+      <HookExam />
     </>
   );
 }

@@ -22,9 +22,17 @@ let str2 = "10개";
 
 let str2ToNumber = parseInt(str2);
 
+console.log("str2ToNumber", str2ToNumber);
+
 console.log(typeof str2);
 
+// 숫자 => 문자열
 let num1 = 20;
 let numToStr = String(num1);
 
 console.log(numToStr + "입니다");
+
+const str3 = "30개";
+const str3ToNumber = parseInt(str3);
+
+console.log("str3ToNumber", str3ToNumber);
